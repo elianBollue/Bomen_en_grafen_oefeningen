@@ -160,7 +160,7 @@ public class Recursie {
         else{
             lijst.add(string);
             lijst.add(string.substring(0,1));
-            lijst.add(string.substring(string.length()));
+            lijst.add(string.substring(string.length()-1));
             lijst.addAll(findSubstrings(string.substring(0,string.length()-1)));
             lijst.addAll(findSubstrings(string.substring(1)));
             return lijst;
