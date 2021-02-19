@@ -1,0 +1,10 @@
+2.1.a) Ja
+    b) F
+    c) 4
+    d) nee
+    e) A C E H
+    f) B D G I
+    g) 5
+    h) F B A D C E G I H
+    i) C D E A B F H I G (fout) -> A B C D E F H I G
+    j) C E D A B H I G F (fout) -> A C E D B H I G F
