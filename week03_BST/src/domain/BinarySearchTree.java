@@ -18,7 +18,35 @@ public class BinarySearchTree<E extends Comparable<E>> extends BinaryTree<E> {
 	}
 
 	public boolean addNode(E data) {
-		throw new UnsupportedOperationException("Not yet implemented");
+		if(this.data == null && this.leftTree == null && this.rightTree == null){
+			this.data = data;
+			return true;
+		}
+		else{
+			if(data.compareTo(this.data) == 0){
+				return false;
+			}
+			else{
+				if(data.compareTo(this.data) < 0){
+					if(this.leftTree == null){
+						this.leftTree = new BinarySearchTree<>(data,null,null);
+						return true;
+					}
+					else{
+						return this.leftTree.addNode(data);
+					}
+				}
+				else{
+					if(this.rightTree == null){
+						this.rightTree = new BinarySearchTree<>(data,null,null);
+						return true;
+					}
+					else{
+						return this.rightTree.addNode(data);
+					}
+				}
+			}
+		}
 	}
 
 	public boolean removeNode(E data){
