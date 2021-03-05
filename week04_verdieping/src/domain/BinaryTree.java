@@ -111,6 +111,17 @@ public class BinaryTree<E> {
 					(this.rightTree != null && this.rightTree.lookup(s));
 		}
 	}
+
+	public int count(E data){
+		if(data == null){
+			return 0;
+		}
+		else{
+			return (data.equals(this.data) ? 1 : 0) + (this.leftTree == null ? 0 : this.leftTree.count(data))
+					+ (this.rightTree == null ? 0 : this.rightTree.count(data));
+		}
+	}
+
 	public boolean addNode(E data) {
 		throw new UnsupportedOperationException("Fake method");
 	}
