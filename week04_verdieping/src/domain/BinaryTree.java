@@ -1,5 +1,7 @@
 package domain;
 
+import java.util.ArrayList;
+
 public class BinaryTree<E> {
 	E data;
 	BinaryTree<E> leftTree, rightTree;
@@ -132,5 +134,24 @@ public class BinaryTree<E> {
 
 	public E searchSmallest(){
 		throw new UnsupportedOperationException("Fake method");
+	}
+
+	public ArrayList<E> getNodesAtDistance(int k){
+		if(k < 0){
+			throw new IllegalArgumentException("Foute waarde");
+		}
+		ArrayList<E> lijst = new ArrayList<>();
+		if(k == 0){
+			lijst.add(this.data);
+		} else{
+			if(this.leftTree != null){
+				lijst = this.leftTree.getNodesAtDistance(k-1);
+			}
+			if(this.rightTree != null){
+				ArrayList<E> lijstRechts = this.rightTree.getNodesAtDistance(k-1);
+				lijst.addAll(lijstRechts);
+			}
+		}
+		return lijst;
 	}
 }

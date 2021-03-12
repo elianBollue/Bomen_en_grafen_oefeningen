@@ -26,10 +26,12 @@ public class Week04Testing {
         BinaryTree<String> nodeG = new BinaryTree<>("G",null,nodeI);
         BinaryTree<String> boom2 = new BinaryTree<>("A",nodeHtop,nodeG);
 
-        System.out.println(boom2.count("I"));
+        /*System.out.println(boom2.count("I"));
         System.out.println(boom2.count("A"));
         System.out.println(boom2.count("H"));
         System.out.println(boom2.count("E"));
-        System.out.println(boom2.count("Q"));
+        System.out.println(boom2.count("Q"));*/
+
+        System.out.println(boom2.getNodesAtDistance(2));
     }
 }
