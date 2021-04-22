@@ -1,13 +1,13 @@
 package domain;
 
-public class BinaryTree<E> {
+public class BinaryTree<E>{
 	E data;
 	BinaryTree<E> leftTree, rightTree;
-
+	
 	public BinaryTree(E data){
 		this(data,null,null);
 	}
-
+	
 	public BinaryTree(E data, BinaryTree<E> leftTree, BinaryTree<E> rightTree){
 		if (data == null) {
 			throw new IllegalArgumentException();
@@ -16,110 +16,33 @@ public class BinaryTree<E> {
 		this.leftTree= leftTree;
 		this.rightTree= rightTree;
 	}
-
-	public void printPreorder(){
-			System.out.print(this.data + " ");
-			if (this.leftTree != null) this.leftTree.printPreorder();
-			if (this.rightTree != null) this.rightTree.printPreorder();
-	}
-
+	
 	public void printInorder(){
-		if(this.leftTree != null){
-			this.leftTree.printInorder();
-		}
-		System.out.print(this.data + " ");
-		if(this.rightTree!=null){
-			this.rightTree.printInorder();
-		}
-	}
-
-	public void printPostorder(){
-		if(this.leftTree != null){
-			this.leftTree.printPostorder();
-		}
-		if(this.rightTree != null){
-			this.rightTree.printPostorder();
-		}
-		System.out.print(this.data + " ");
-	}
-
-	public int countNodes(){
-		int teller = 1;
-		if(this.leftTree != null){
-			teller += this.leftTree.countNodes();
-		}
-		if(this.rightTree != null){
-			teller += this.rightTree.countNodes();
-		}
-		return teller;
-	}
-
-	public int getDepth(){
-		int tellerLinks = 0;
-		int tellerRechts = 0;
-		int totaal = 1;
-		if(this.leftTree != null){
-			tellerLinks += this.leftTree.getDepth();
-		}
-		if(this.rightTree != null){
-			tellerRechts += this.rightTree.getDepth();
-		}
-		totaal += Math.max(tellerLinks,tellerRechts);
-		return totaal;
-	}
-
-	public boolean isLeaf(){
-		return this.leftTree == null && this.rightTree == null;
-	}
-
-	public int countLeaves() {
-		int teller = 0;
-		if (this.isLeaf()) {
-			return 1;
-		} else {
-			if (this.leftTree != null) {
-				teller += this.leftTree.countLeaves();
-			}
-			if (this.rightTree != null) {
-				teller += this.rightTree.countLeaves();
-			}
-		}
-		return teller;
-	}
-
-	public void getDataLeaves(){
-		if(this.isLeaf()){
+			if (this.leftTree != null) this.leftTree.printInorder();
 			System.out.print(this.data + " ");
-		}
-		if (this.leftTree != null) {
-			this.leftTree.getDataLeaves();
-		}
-		if (this.rightTree != null) {
-			this.rightTree.getDataLeaves();
-		}
+			if (this.rightTree != null) this.rightTree.printInorder();
 	}
 
-	public boolean lookup(E s){
-		if(s == null){
-			return false;
-		}
-		if(s.equals(this.data)){
-			return true;
-		}
-		else {
-			return (this.leftTree != null && this.leftTree.lookup(s)) ||
-					(this.rightTree != null && this.rightTree.lookup(s));
-		}
-	}
-	public boolean addNode(E data) {
-		throw new UnsupportedOperationException("Fake method");
+
+	//*ONDERSTAANDE METHODES NIET IMPLEMENTEREN! DEZE MOETEN GEIMPLEMENTEERD WORDEN IN DE BinarySearchTree file!*//
+	boolean lookup(E data) {
+		throw new UnsupportedOperationException("Should not be implemented, implement in BinarySearchTree file");
 	}
 
-	public E searchGreatest(){
-		throw new UnsupportedOperationException("Fake method");
+	boolean addNode(E data) {
+		throw new UnsupportedOperationException("Should not be implemented, implement in BinarySearchTree file");
 	}
 
-	public E searchSmallest(){
-		throw new UnsupportedOperationException("Fake method");
+	boolean removeNode(E data){
+		throw new UnsupportedOperationException("Should not be implemented, implement in BinarySearchTree file");
 	}
+
+	E searchSmallest(){
+		throw new UnsupportedOperationException("Should not be implemented, implement in BinarySearchTree file");
+	}
+
+	E searchGreatest(){
+		throw new UnsupportedOperationException("Should not be implemented, implement in BinarySearchTree file");
+	}
+
 }
