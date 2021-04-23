@@ -48,8 +48,22 @@ public class Graph {
         queue.add(start);
         ancestors[start - 1] = 0;
 
-        // oefening 1.4
-
+        // oefening 7.4
+        int current = queue.remove();
+        while(current != destination){
+            for(int i = 1 ; i <= this.getAantalKnopen() ; i++){
+                if(verbindingsMatrix[current-1][i-1] == 1 && ancestors[i-1] == infty){
+                    queue.add(i);
+                    ancestors[i-1] = current;
+                }
+            }
+            if(!queue.isEmpty()){
+                current = queue.remove();
+            }
+            else{
+                break;
+            }
+        }
         return ancestors;
     }
 
@@ -61,6 +75,13 @@ public class Graph {
         List<Integer> path = new LinkedList<>();
 
         // oefening 1.5
+        int knoop = ancestors[destination-1];
+        while(knoop != start && knoop != infty){
+            path.add(0,knoop);
+            knoop = ancestors[knoop-1];
+        }
+        path.add(0,start);
+        path.add(destination);
 
         return path;
 

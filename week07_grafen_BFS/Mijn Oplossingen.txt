@@ -1,0 +1,21 @@
+OEF 7.1
+a) NIET VERBETERD
+0 1 1 1 0 0 0 0
+1 0 1 0 1 0 0 0
+1 1 0 0 0 1 0 0
+1 0 0 0 0 1 1 0
+0 1 0 0 0 1 0 1
+0 0 1 1 1 0 1 0
+0 0 0 1 0 1 0 1
+0 0 0 0 1 0 1 0
+b) 1 2 5 8	of	1 4 7 8
+
+OEF 7.2
+0, 1, 1, 1, 2, 3, 4, 5 (NIET VERBETERD, WAARSCHIJNLIJK JUIST)
+DUS 8 <- 5 <- 2 <- 1
+
+OEF 7.3
+a) aantal kolommen gelijk aantal rijen
+   linksboven tot rechtsonder diagonaal moet 0 zijn
+   alle waarden moeten 0 of 1 zijn
+b) De matrix waardes kunnen toch maar enkel 0 of 1 zijn, true of false werkt dan beter.

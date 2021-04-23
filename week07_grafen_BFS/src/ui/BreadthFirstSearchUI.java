@@ -2,7 +2,7 @@ package ui;
 
 import java.util.List;
 
-import domain.Graph;
+import domain.*;
 
 public class BreadthFirstSearchUI {
 
