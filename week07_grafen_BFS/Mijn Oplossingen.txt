@@ -19,3 +19,5 @@ a) aantal kolommen gelijk aantal rijen
    linksboven tot rechtsonder diagonaal moet 0 zijn
    alle waarden moeten 0 of 1 zijn
 b) De matrix waardes kunnen toch maar enkel 0 of 1 zijn, true of false werkt dan beter.
+
+7.6 nog niet gedaan

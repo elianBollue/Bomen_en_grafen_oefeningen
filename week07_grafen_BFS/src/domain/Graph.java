@@ -80,8 +80,10 @@ public class Graph {
             path.add(0,knoop);
             knoop = ancestors[knoop-1];
         }
-        path.add(0,start);
-        path.add(destination);
+        if(path.size() != 0){
+            path.add(0,start);
+            path.add(destination);
+        }
 
         return path;
 
