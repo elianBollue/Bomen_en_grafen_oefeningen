@@ -1,7 +1,7 @@
 package ui;
 
 
-import domain.Graph;
+import domain.*;
 
 public class uiOefeningPunt1 {
 

@@ -1,6 +1,6 @@
 package ui;
 
-import domain.Graph;
+import domain.*;
 
 public class UiDijkstra {
 
