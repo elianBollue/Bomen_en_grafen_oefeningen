@@ -1,7 +1,7 @@
 package ui;
 import java.util.List;
 
-import domain.WeightedGraph;
+import domain.*;
 public class FloydUI {
 	static final double infty = WeightedGraph.infty;
 	public static void main(String[] args) {
