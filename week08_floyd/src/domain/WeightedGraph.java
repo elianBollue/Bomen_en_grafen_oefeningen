@@ -51,7 +51,7 @@ public class WeightedGraph {
 		        res.add(tot);
             } else{
 		        res = getShortestPath(van, via, pointer);
-		        res.remove(res.size()-1);
+		        res.remove(res.size()-1); //anders dubbel
 		        res.addAll(getShortestPath(via, tot, pointer));
             }
         }
